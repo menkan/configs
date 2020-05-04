@@ -1,5 +1,4 @@
-" Base config
-
+set fileformat=unix
 let mapleader=" "
 set noerrorbells
 syntax on
