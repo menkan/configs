@@ -1,6 +1,12 @@
 color snazzy
 let g:SnazzyTransparent = 0.8
 
+" ====== set airline config. ========
+" let g:airline_theme="luna" " no't set thema plugin
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#buffer_nr_show = 1
+" =========================================
+
 " ===
 " === NERDTree
 " ===
