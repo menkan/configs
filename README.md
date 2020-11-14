@@ -1,5 +1,7 @@
-> 个人配置项
+> a person configs.
 
-> 后续添加个人配置其他的配置项目
+> add person config item.
 
-* Linux Vimrc
+* linux vim configs.
+* alias configs.
+* ranger configs.
