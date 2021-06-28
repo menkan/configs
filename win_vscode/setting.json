@@ -1,0 +1,206 @@
+{
+    "workbench.iconTheme": "vscode-icons",
+    "explorer.confirmDelete": false,
+    "editor.lineNumbers":"relative",
+    "editor.cursorSurroundingLines": 6,
+    "vim.useSystemClipboard": true, // 使用系统剪贴板
+    "vim.leader": "<space>",
+
+    "vim.cursorStylePerMode.normal": "block",
+    "vim.cursorStylePerMode.insert": "line-thin",
+    "vim.cursorStylePerMode.replace": "block-outline",
+
+    "vim.searchHighlightColor": "rgba(150, 150, 150, 0.3)",
+
+     // vim插入模式
+    "vim.insertModeKeyBindings": [
+        {
+            "before": [
+                "j",
+                "j"
+            ],
+            "after": [
+                "<esc>"
+            ]
+        }
+    ],
+
+    // vim命令模式
+    "vim.normalModeKeyBindings": [
+        // 保存并退出当前文件Q
+        {
+            "before": [
+                "Q"
+            ],
+            "commands": [
+                ":wq"
+            ]
+        },
+        
+        // 复制全文 ,v
+        {
+            "before": [
+                "<leader>",
+                "v"
+            ],
+            "after": [
+                "g",
+                "g",
+                "V",
+                "G",
+                "y"
+            ]
+        },
+        // 删除光标到本行最后
+        {
+            "before": [
+                "<leader>",
+                "d"
+            ],
+            "after": [
+                "d",
+                "$",
+                "a",
+                " "
+            ],
+        },
+        // 注释内容
+        {
+            "before": [
+                "<leader>",
+                "/"
+            ],
+            "after": [
+                "g",
+                "c",
+                "c",
+            ],
+        },
+        // 复制当前当前单词
+        {
+            "before": [
+                "<leader>",
+                "w"
+            ],
+            "after": [
+                "v",
+                "i",
+                "w",
+                "y"
+            ],
+        },
+        // 修改当前单词
+        {
+            "before": [
+                "<leader>",
+                "c"
+            ],
+            "after": [
+                "c",
+                "i",
+                "w",
+            ],
+        },
+        {
+            "before": [
+                "E"
+            ],
+            "after": [
+                "5", "j", "z", "z"
+            ]
+        },
+    
+        {
+            "before": [
+                "U"
+            ],
+            "after": [
+                "5", "k", "z", "z"
+            ]
+        },
+    ],
+    
+    "vim.normalModeKeyBindingsNonRecursive": [
+        // 保存当前文件
+        {
+            "before": [
+                "leader",
+                "s"
+            ],
+            "commands": [
+                "workbench.action.files.save",
+            ]
+        },
+    ],
+
+    "vim.visualModeKeyBindingsNonRecursive": [
+        // 调整缩进
+        {
+            "before": [
+                ">"
+            ],
+            "commands": [
+                "editor.action.indentLines"
+            ]
+        },
+        {
+            "before": [
+                "<"
+            ],
+            "commands": [
+                "editor.action.outdentLines"
+            ]
+        },
+    ],
+    "workbench.sideBar.location": "right",
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter.notebook.ipynb"
+    },
+    "workbench.startupEditor": "none",
+    "workbench.colorTheme": "Solarized Dark",
+
+    "todohighlight.keywords": [
+        "DEBUG:",
+        "REVIEW:",
+        {
+            "text": "NOTE -",
+            "color": "#ff0000",
+            "backgroundColor": "yellow",
+            "overviewRulerColor": "grey"
+        },
+        {
+            "text": "HACK -",
+            "color": "#000",
+            "isWholeLine": false,
+        },
+        {
+            "text": "TODO -",
+            "color": "red",
+            "border": "1px solid red",
+            "borderRadius": "2px", //NOTE: using borderRadius along with `border` or you will see nothing change
+            "backgroundColor": "rgba(0,0,0,.2)",
+            //other styling properties goes here ... 
+        },
+        {
+            "text": "TEMPORARY -",
+            "color": "blue",
+            "border": "1px solid red",
+            "borderRadius": "2px", //NOTE: using borderRadius along with `border` or you will see nothing change
+            "backgroundColor": "yellow",
+            //other styling properties goes here ... 
+        }
+    ],
+    "search.searchOnType": false,
+    "window.zoomLevel": 1,
+    "todohighlight.include": [
+
+        "**/*.js",
+        "**/*.jsx",
+        "**/*.ts",
+        "**/*.tsx",
+        "**/*.html",
+        "**/*.php",
+        "**/*.css",
+        "**/*.scss"
+    ],
+}
