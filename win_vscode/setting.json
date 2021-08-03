@@ -12,18 +12,8 @@
 
     "vim.searchHighlightColor": "rgba(150, 150, 150, 0.3)",
 
-     // vim插入模式
-    "vim.insertModeKeyBindings": [
-        {
-            "before": [
-                "j",
-                "j"
-            ],
-            "after": [
-                "<esc>"
-            ]
-        }
-    ],
+    // vim插入模式
+    "vim.insertModeKeyBindings": [],
 
     // vim命令模式
     "vim.normalModeKeyBindings": [
@@ -124,8 +114,7 @@
         // 保存当前文件
         {
             "before": [
-                "leader",
-                "s"
+                "S"
             ],
             "commands": [
                 "workbench.action.files.save",
@@ -154,10 +143,9 @@
     ],
     "workbench.sideBar.location": "right",
     "workbench.editorAssociations": {
-        "*.ipynb": "jupyter.notebook.ipynb"
+        "*.ipynb": "jupyter-notebook"
     },
     "workbench.startupEditor": "none",
-    "workbench.colorTheme": "Solarized Dark",
 
     "todohighlight.keywords": [
         "DEBUG:",
@@ -191,9 +179,7 @@
         }
     ],
     "search.searchOnType": false,
-    "window.zoomLevel": 1,
     "todohighlight.include": [
-
         "**/*.js",
         "**/*.jsx",
         "**/*.ts",
@@ -203,4 +189,34 @@
         "**/*.css",
         "**/*.scss"
     ],
+    "git.confirmSync": false,
+    "cloudmusic.account.autoCheck": true,
+    "cloudmusic.network.foreignUser": true,
+    "leetcode.endpoint": "leetcode-cn",
+    "javascript.updateImportsOnFileMove.enabled": "never",
+    "terminal.integrated.profiles.windows": {
+        "PowerShell": {
+            "source": "PowerShell",
+            "icon": "terminal-powershell"
+        },
+        "Command Prompt": {
+            "path": [
+                "${env:windir}\\Sysnative\\cmd.exe",
+                "${env:windir}\\System32\\cmd.exe"
+            ],
+            "args": [],
+            "icon": "terminal-cmd"
+        },
+        "Git Bash": {
+            "source": "Git Bash"
+        },
+        "Windows PowerShell": {
+            "path": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe"
+        }
+    },
+    "terminal.integrated.defaultProfile.windows": "Windows PowerShell",
+    "notebook.cellToolbarLocation": {
+        "default": "right",
+        "jupyter-notebook": "left"
+    },
 }

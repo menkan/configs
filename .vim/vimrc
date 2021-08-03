@@ -73,11 +73,67 @@ map <down> :res -5<CR>
 map <left> :vertical resize-5<CR>
 map <right> :vertical resize+5<CR>
 
-
 map tu :tabe<CR>
 map to :tabo<CR>
 map th :tabp<CR>
 map tl :tabn<CR>
 map sv <C-w>t<C-w>H
 map sr <C-w>t<C-w>K
+
+source ~/.vim/snippits.vim
+
+" Specify a directory for plugins
+" - For Neovim: stdpath('data') . '/plugged'
+" - Avoid using standard Vim directory names like 'plugin'
+call plug#begin('~/.vim/autoload')
+
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'Xuyuanp/nerdtree-git-plugin'
+"Plug 'ctrlpvim/ctrlp.vim', { 'on': 'CtrlP' }
+
+
+
+
+
+
+" Initialize plugin system
+call plug#end()
+
+" ====== set airline config. ========
+" let g:airline_theme="luna" " no't set thema plugin
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#buffer_nr_show = 1
+" =========================================
+
+
+" ===
+" === NERDTree
+" set open quick key.
+" ===
+map tt :NERDTreeToggle<CR>
+let NERDChristmasTree=1 " 让树更好看,我是没看出来
+let NERDTreeCaseSensitiveSort=1 " 让文件排列更有序
+let NERDTreeChDirMode=1 " 改变tree目录的同时改变工程的目录
+let NERDTreeHijackNetrw=1 " 当输入 [:e filename]不再显示netrw,而是显示nerdtree
+let NERDTreeWinPos='right'
+let NERDTreeBookmarksFile='~/.vim/NERDTreeBookmarks'
+let NERDTreeShowBookmarks=1
+
+" ==
+" == NERDTree-git
+" ==
+let g:NERDTreeIndicatorMapCustom = {
+    \ "Modified"  : "✹",
+    \ "Staged"    : "✚",
+    \ "Untracked" : "✭",
+    \ "Renamed"   : "➜",
+    \ "Unmerged"  : "═",
+    \ "Deleted"   : "✖",
+    \ "Dirty"     : "✗",
+    \ "Clean"     : "✔︎",
+    \ "Unknown"   : "?"
+    \ }
 
